@@ -6,4 +6,7 @@
 
 *.mod
 
-bin/matrix.dSYM/Contents/Resources/DWARF/matrix
+*.plist
+
+bin/matrix.dSYM
+
