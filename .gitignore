@@ -1,11 +1,7 @@
 /.DS_Store
+
 /.vscode
-*.dYSM
+
+*.dSYM
+
 *.mod
-array_module.mod
-*.plist
-
-bin/array.dSYM/Contents/Resources/DWARF/array
-bin/matrix.dSYM/Contents/Resources/DWARF/matrix
-
-

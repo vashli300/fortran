@@ -35,7 +35,7 @@ recursive subroutine input()
 
     print *, "ENTER THE NUMBERS FOR MATRIX TWO, ROW BY ROW, RIGHT TO LEFT "
 
-    do i = 1, MATRIX_1_ROW
+    do i = 1, MATRIX_2_ROW
         do j = 1, MATRIX_2_COLUMN
             read (*,*) matrix2(i,j)
         end do
@@ -49,9 +49,9 @@ recursive subroutine multiply()
     implicit none
     character confirmation
 
-    allocate(matrixProduct(MATRIX_1_ROW,MATRIX_1_COLUMN))
+    allocate(matrixProduct(MATRIX_1_ROW,MATRIX_2_COLUMN))
 
-    
+
 
     deallocate(matrix1)
     deallocate(matrix2)
