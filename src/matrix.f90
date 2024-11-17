@@ -49,6 +49,10 @@ recursive subroutine multiply()
     implicit none
     character confirmation
 
+    if ( MATRIX_1_ROW /= MATRIX_2_COLUMN ) then
+        return
+    end if
+
     allocate(matrixProduct(MATRIX_1_ROW,MATRIX_2_COLUMN))
 
 
