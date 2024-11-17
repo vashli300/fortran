@@ -2,9 +2,10 @@
 /.vscode
 *.dYSM
 *.mod
-src/array_module.mod
+array_module.mod
 *.plist
 
 bin/array.dSYM/Contents/Resources/DWARF/array
 bin/matrix.dSYM/Contents/Resources/DWARF/matrix
+
 
