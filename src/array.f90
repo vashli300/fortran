@@ -206,6 +206,19 @@ end subroutine
 
 recursive subroutine arrayMaximum()
     implicit none
+    integer :: max, i
+
+    max = global_array(1)
+
+    do i = 1, size(global_array)
+        if (max < global_array(i)) then
+            max = global_array(i)
+        end if
+    end do
+
+    print *, "MAXIMUM VALUE IS: ", max
+
+    call menu()
 
 end subroutine
 
