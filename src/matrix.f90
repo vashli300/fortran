@@ -48,13 +48,30 @@ end subroutine
 recursive subroutine multiply()
     implicit none
     character confirmation
+    integer :: i, j, k
 
-    if ( MATRIX_1_ROW /= MATRIX_2_COLUMN ) then
+    if (MATRIX_1_COLUMN /= MATRIX_2_ROW) then
+        print *, "YOURE TRASH"
         return
     end if
 
     allocate(matrixProduct(MATRIX_1_ROW,MATRIX_2_COLUMN))
+    
+    matrixProduct = 0
 
+
+    do i = 1, MATRIX_1_ROW
+        do j = 1, MATRIX_2_COLUMN
+            do k = 1, MATRIX_1_COLUMN
+                matrixProduct(i,j) = matrixProduct(i,j) + matrix1(i,k) * matrix2(k,j)
+            end do
+        end do
+    end do
+
+    print *, "RESULT MATRIX:"
+    do i = 1, MATRIX_1_ROW
+        print *, (matrixProduct(i,j), j = 1, MATRIX_2_COLUMN)
+    end do
 
 
     deallocate(matrix1)
